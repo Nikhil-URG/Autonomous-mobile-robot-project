@@ -1,0 +1,7 @@
+{
+  "package_name": "robile_interfaces",
+  "non_idl_tuples": [
+    "/home/khizer/amr_project/robile_interfaces:msg/PositionLabelled.msg",
+    "/home/khizer/amr_project/robile_interfaces:msg/PositionLabelledArray.msg"
+  ]
+}
