@@ -1,9 +1,9 @@
-# Particle Filter for Robot Localization (ROS 2)
+# Task 1 – A* + Potential Field Global Planner for Robile
 
-This repository contains an implementation of Particle Filter-based localization for a mobile robot in simulation. The system integrates with Gazebo, RViz, and a navigation stack to demonstrate robot localization and path planning.
+This branch implements an A*-based global planner combined with a Potential Field planner for the Robile platform. It also integrates AMCL-based localization and waypoint following.
 
 
-## 🚀 Setup Instructions
+## 📥 Setup Instructions
 ### 1. Clone into ROS 2 Workspace
 
 Navigate to the src folder of your ROS 2 workspace and pull this repository directly (not inside a repo-named folder):
@@ -23,64 +23,74 @@ colcon build`
 
 ## 🖥️ Running the System
 
-You will need 4 terminals. Run each step in a separate terminal:
+Step 1 – Connect to Robile
 
-### Terminal 1: Launch Gazebo Simulation
+Connect your PC to the Robile5G Wi-Fi network.
 
-`ros2 launch robile_gazebo gazebo_4_wheel.launch.py`
+Establish communication using the official documentation:
 
-In RViz:
+[Official Documentation](https://robile-amr.readthedocs.io/en/latest/source/Tutorial/Demo%20Communication.html)
+
+### Step 2 – Launch Robile Drivers
+
+`ros2 launch robile_bringup robot.launch.py`
+
+### Step 3 – Visualize in RViz
+
+Launch RViz2:
+
+`rviz2`
 
 Go to File → Open Config
 
-Load: robile_slam/config/localization_config.rviz
+Load: robile_slam/config/mapping_config.rviz
 
 If the robot spawns near a wall or corner, use the teleop keyboard to move it toward the center of the arena.
 
-### Terminal 2: Run Particle Filter Node
+### Step 4 – Map the Environment
+
+Follow the official mapping tutorial: 
+[Official Documentation](https://robile-amr.readthedocs.io/en/latest/source/Tutorial/Demo%20Mapping.html)
+
+After mapping, save the map.
+
+### Step 5 – Test Using AMCL Localization
+
+### (i) Switch RViz Config
+
+Load: robile_slam/config/mapping_config.rviz
+
+### New Terminal : Run Particle Filter Node
 
 `ros2 run robile_slam particle_filter_node`
 
-### Terminal 3: Start Navigation
+### New Terminal : Run the Global Planner
 
-`ros2 run robile_slam navigation.launch.py`
+`ros2 run robile_slam global_planner_node`
 
+### New Terminal : Run the waypoint follower
 
-### Terminal 4: Launch Map Server
-
-`ros2 launch robile_slam map_server.launch.py`
-
-### ✅ Verification
-
-Check the following logs to confirm everything is working:
-
-## Particle Filter Terminal → should say:
-
-`publishing amcl_pose`
-
-## Navigation Terminal → should show:
-
-`[global_planner] found path to goal`
-
-# ⚠️ Common Issues
-
-## Map not received error
-
-- Can occur randomly.
-
-- Ensure the launch order is followed exactly.
-
-## Particle Filter not working
-
-- Sometimes fails randomly.
-
-- Restart from Step 2 (re-run particle filter node).
+`ros2 run robile_slam waypoint_follower_node`
 
 
-# 🎯 Using RViz for Localization & Navigation
+### New Terminal: Launch the Map Server / AMCL Node
 
-In RViz, select 2D Pose Estimate and drag the arrow to approximately match the robot’s actual position in the arena.
+`ros2 launch robile_navigation localization.launch.py`
 
-Set a goal using 2D Goal Pose.
+### Step 7 – Provide Initial Pose in RViz
 
-You should see a planned path, and the robot should start moving toward the goal.
+- In RViz, select 2D Pose Estimate.
+
+- Click and drag to align the estimated starting pose with the robot’s actual starting point.
+
+- You may need to move the robot slightly until the pose in RViz coincides with the actual robot position.
+
+
+
+## Step 8 – Set Goal Position
+
+- Use 2D Goal Pose in RViz to set a target location on the map.
+
+- The combined Global Planner + Potential Field Planner will generate a path.
+
+- The robot will start moving toward the goal.
