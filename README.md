@@ -1,3 +1,41 @@
+# SLAM using Robile
+
+This repository serves as the **main landing page** for the Robile project.
+It provides a high-level overview and links to individual repositories / branches for each task.
+
+Each task was developed separately to keep the code clean and organized. Use the links below to quickly navigate to each task.
+
+---
+
+## 📚 Tasks
+
+| Task       | Description                                                                 | Link                                                                    |
+| ---------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| **Task 1** | A\* Global Planner + Potential Field Planner combined for Robile navigation | [🔗 View Task 1 Repository/Branch](https://github.com/HBRS-AMR/amr-ss25-projects-stark_syndicate_m42.git) |
+| **Task 2** | *(A\* Global Planner + Potential Field Planner+ Monte Carlo Localization combined for Robile navigation)*                                 | [🔗 View Task 2 Repository/Branch](https://github.com/HBRS-AMR/amr-ss25-projects-stark_syndicate_m42.git) |
+| **Task 3** | Automated Mapping & Environment Exploration                                 | [🔗 View Task 3 Repository/Branch](https://github.com/HBRS-AMR/amr-ss25-projects-stark_syndicate_m42.git) |
+
+---
+
+## 🚀 How to Use
+
+* Click on any of the links above to go directly to the repository/branch for that task.
+* Each task repository has its own **README.md** with full setup and run instructions.
+* Clone and build the task repositories individually following their instructions.
+
+---
+
+## 📝 Notes
+
+* All tasks are ROS 2 based and tested with Robile.
+* The separation ensures modularity and easy navigation.
+* Use the provided README files in each repository to set up and run the systems.
+
+
+
+
+
+
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/pDOoIxCj)
 # AMR Project
 
