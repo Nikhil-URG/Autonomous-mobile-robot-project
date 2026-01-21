@@ -4,7 +4,7 @@ This branch implements an A*-based global planner combined with a Potential Fiel
 
 
 ## 📥 Setup Instructions
-### 1. Clone into ROS 2 Workspace
+### 1. Clone into ROS 2 Workspace   
 
 Navigate to the src folder of your ROS 2 workspace and pull this repository directly (not inside a repo-named folder):
 
