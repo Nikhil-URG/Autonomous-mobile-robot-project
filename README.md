@@ -16,9 +16,9 @@ Each task was developed separately to keep the code clean and organized. Use the
 
 | Task       | Description                                                                 | Link                                                                    |
 | ---------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| **Task 1** | A\* Global Planner + Potential Field Planner combined for Robile navigation | [🔗 Task 1 Branch](https://github.com/HBRS-AMR/amr-ss25-projects-stark_syndicate_m42/tree/task-1) |
-| **Task 2** | *(A\* Global Planner + Potential Field Planner+ Monte Carlo Localization combined for Robile navigation)*                                 | [🔗 Task 2 Branch](https://github.com/HBRS-AMR/amr-ss25-projects-stark_syndicate_m42/tree/task-2) |
-| **Task 3** | Automated Mapping & Environment Exploration                                 | [🔗 Task 3 Branch](https://github.com/HBRS-AMR/amr-ss25-projects-stark_syndicate_m42/tree/task-3) |
+| **Task 1** | A\* Global Planner + Potential Field Planner combined for Robile navigation | [🔗 Task 1 Branch](https://github.com/Nikhil-URG/Autonomous-mobile-robot-project/tree/task-1) |
+| **Task 2** | *(A\* Global Planner + Potential Field Planner+ Monte Carlo Localization combined for Robile navigation)*                                 | [🔗 Task 2 Branch](https://github.com/Nikhil-URG/Autonomous-mobile-robot-project/tree/task-2) |
+| **Task 3** | Automated Mapping & Environment Exploration                                 | [🔗 Task 3 Branch](https://github.com/Nikhil-URG/Autonomous-mobile-robot-project/tree/task-3) |
 
 ---
 
