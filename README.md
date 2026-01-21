@@ -12,7 +12,7 @@ Navigate to the src folder of your ROS 2 workspace and pull this repository dire
 git clone --depth 1 <repo_link> .`
 
 
-### 2. Build the Workspace
+### 2. Build the Workspace 
 
 `cd ~/ros2_ws
 colcon build`
