@@ -1,4 +1,4 @@
-# Task 1 – A* + Potential Field Global Planner for Robile
+# Task 1 – A* + Potential Field Global Planner for Robile 
 
 This branch implements an A*-based global planner combined with a Potential Field planner for the Robile platform. It also integrates AMCL-based localization and waypoint following.
 
@@ -93,4 +93,4 @@ Load: robile_slam/config/mapping_config.rviz
 
 - The combined Global Planner + Potential Field Planner will generate a path.
 
-- The robot will start moving toward the goal.
+- The robot will start moving toward the goal. 
